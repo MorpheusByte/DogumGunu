@@ -1,0 +1,682 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    /* border: 1px solid red; */
+}
+
+.container{
+    background-color: #FBFBFE;
+}
+
+/* !HEADER KISMI */
+
+header{
+    height: 10%;
+    background-color: #e9e9f7;
+    position: relative;
+}
+
+.header{
+    position: sticky;
+    z-index: 1;
+}
+
+.header ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+
+}
+
+header ul *{
+    padding: 10px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    list-style: none;
+}
+
+header ul li a:visited{
+    color: black;
+}
+
+header ul li a:hover{
+    color: blue;
+}
+
+/* !HOME KISMI */
+
+#home{
+    display: flex;
+    padding: 10%;
+}
+
+.homeText{
+    width: 100%;
+    font-size: 1.3rem;
+    padding-top: 20%;
+    padding-left: 10%;
+}
+
+.homeText p{
+    color:    rgb(109, 106, 124);
+}
+
+.homeText *{
+    padding-bottom: 1rem;
+}
+
+.homeImage{
+    width: 100%;
+    margin-left: 10%;
+}
+
+.homeImage img{
+    width: 100%;
+    padding-top: 80px;
+    border-radius: 50%;
+}
+
+.socialMedia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-size: 2rem;
+    padding-top: 30px;
+}
+
+.socialMedia a:visited{
+    color: black;
+}
+
+.socialMedia a:hover{
+    color: blue;
+}
+
+/* !ABOUT KISMI */
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.about h1{
+    text-align: center;
+    font-size: 24px;
+    color: rgb(36, 35, 41);
+}
+
+.about p{
+    color:    rgb(109, 106, 124);
+    padding: 20px 5%;
+    text-align: justify;
+}
+
+.aboutExp{
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+}
+
+.aboutExp *{
+    width: 100px;
+}
+
+.aboutExp p{
+    text-align: center;
+    padding-top: 0.5px;
+}
+
+.aboutMessage1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutMessage{
+    width: 250px;
+    height: 60px;
+    margin-left: 20px auto;
+    background-color: #6D57E0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.aboutMessage a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0%;
+}
+
+/* !Experience Kısmı */
+
+.experience h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.experience p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab {
+    background: #ddd;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.tab.active {
+    background: #6D57E0;
+    color: white;
+}
+
+.timeline {
+    display: none;
+    border-left: 2px solid #000000;
+    padding-left: 20px;
+}
+
+.timeline.active {
+    display: block;
+}
+
+.event {
+    background: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* !Academic Kısmı */
+
+.event{
+    text-align: center;
+}
+
+/* !Projelerim Kısmı */
+
+/* Genel Projeler Alanı */
+.projects {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+/* 1. Grid Kapsayıcısı */
+.projects-grid {
+    display: grid;
+    /* Öğeler arasında 20 piksel boşluk bırakır */
+    gap: 20px; 
+    /* Varsayılan (Telefon Ekranları) - 1 Sütun */
+    grid-template-columns: repeat(1, 1fr); 
+    max-width: 1200px; /* Maksimum genişlik sınırı */
+    margin: 0 auto; /* Ortalamak için */
+}
+
+/* 2. Orta Boy Ekranlar (Örn: Tabletler ve Masaüstü Başlangıcı) */
+/* Ekran genişliği 768px veya daha büyük olduğunda 3 Sütun göster */
+@media (min-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 3. Geniş Ekranlar (Örn: Büyük Masaüstü Monitörler) */
+/* Ekran genişliği 1200px veya daha büyük olduğunda 5 Sütun göster */
+@media (min-width: 1200px) {
+    .projects-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+
+/* Her Bir Proje Öğesi */
+.project-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    overflow: hidden; /* Taşmaları engeller */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Üzerine gelindiğinde hafif yukarı kalkma efekti */
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Proje Link Kapsayıcısı (A) */
+.project-item a {
+    text-decoration: none; /* Link alt çizgisini kaldırır */
+    color: #333;
+    display: block; /* Tam alanı kaplaması için */
+}
+
+/* Proje Görseli */
+.project-item img {
+    width: 100%;
+    /* Yüksekliği otomatik olarak ayarla, böylece bozulma olmaz */
+    height: 250px; 
+    /* Yüksekliği sabitlemek isterseniz: height: 150px; object-fit: cover; kullanın. */
+    display: block;
+}
+
+/* Başlık ve Açıklama Alanı */
+.project-item h3 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    padding: 0 10px;
+}
+
+.project-item p {
+    font-size: 0.9em;
+    color: #666;
+    padding: 0 10px 15px;
+}
+
+
+/* !Skills Kısmı */
+
+/* Ana Yetenekler Alanı */
+.skills {
+    padding: 30px 20px;
+    background-color: #f0f0f5; /* Hafif arka plan */
+    text-align: center; /* Başlık ve içeriği ortalar */
+}
+
+/* Başlık */
+.skills h2 {
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 1.8em;
+}
+
+/* 1. Grid Kapsayıcısı */
+.skills-grid {
+    display: grid;
+    /* Öğeler arasında 15 piksel boşluk bırakır */
+    gap: 15px; 
+    /* Varsayılan (Telefon Ekranları) - 1 Sütun */
+    grid-template-columns: repeat(1, 1fr); 
+    max-width: 1000px; /* Maksimum genişlik sınırı */
+    margin: 0 auto; /* Grid'i ortalar */
+}
+
+/* 2. Orta Boy Ekranlar (768px ve Üzeri) */
+@media (min-width: 768px) {
+    .skills-grid {
+        /* Orta ekranda 3 Sütun göster */
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 3. Geniş Ekranlar (1200px ve Üzeri) */
+@media (min-width: 1200px) {
+    .skills-grid {
+        /* Geniş ekranda 5 Sütun göster */
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* Her Bir İkon Kutucuğu */
+.skill-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex; /* İçindeki ikonu ortalamak için */
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    /* Boyutları eşitlemek için sabit yükseklik verebiliriz */
+    min-height: 80px; 
+}
+
+/* Üzerine gelindiğinde hafif efekt */
+.skill-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* İkonun Kendisi (img) */
+.skill-item img {
+    /* İkonlarınızı 40x40 olarak ayarladınız, bu boyutu koruyalım */
+    width: 40px; 
+    height: 40px;
+    /* İkonlara hafif bir filtre uygulayabiliriz */
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
+}
+
+/* !Contact KISMI */
+
+/* -------------------------------------- */
+/* 1. Global Ayarlar */
+/* -------------------------------------- */
+
+:root {
+    --primary-color: #6D57E0; /* Ana Renginiz */
+    --primary-dark: #5a46c3; /* Buton Hover Rengi */
+    --background-color: #f7f7f9;
+    --card-background: #ffffff;
+    --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+#contact {
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* -------------------------------------- */
+/* 2. Başlık ve Alt Başlık */
+/* -------------------------------------- */
+
+.text-center {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.text-center h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.text-center .subtitle {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* -------------------------------------- */
+/* 3. İletişim Gridi (Form ve Detaylar) */
+/* -------------------------------------- */
+
+.contact-grid {
+    display: grid;
+    gap: 40px;
+}
+
+/* Tablet ve Masaüstü Görünümü (768px üzeri) */
+@media (min-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr 2fr; /* Solda detaylar (1/3), sağda form (2/3) */
+        gap: 60px;
+    }
+}
+
+.contact-details h3, .contact-form-wrapper h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.contact-details h3 {
+    border-left: 4px solid var(--primary-color);
+    padding-left: 15px;
+}
+
+/* -------------------------------------- */
+/* 4. Detay Kartları */
+/* -------------------------------------- */
+
+.detail-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.detail-card {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: var(--card-background);
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+    transition: box-shadow 0.3s ease;
+}
+
+.detail-card:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.detail-card .icon {
+    width: 28px;
+    height: 28px;
+    color: var(--primary-color);
+    margin-top: 3px;
+    flex-shrink: 0; /* İkonun küçülmesini engeller */
+}
+
+.detail-content {
+    margin-left: 15px;
+}
+
+.detail-content .label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #444;
+}
+
+.detail-content .value {
+    font-size: 0.95rem;
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.detail-content a.value:hover {
+    color: var(--primary-color);
+}
+
+/* -------------------------------------- */
+/* 5. Form Stilleri */
+/* -------------------------------------- */
+
+.contact-form-wrapper {
+    background-color: var(--card-background);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-light);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group-double {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Tablet ve Masaüstü için yan yana input */
+@media (min-width: 640px) {
+    .form-group-double {
+        flex-direction: row;
+    }
+    .form-control {
+        width: 100%;
+    }
+}
+
+.form-control label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.form-control input,
+.form-control textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box; /* Padding'in genişliğe dahil olmasını sağlar */
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(109, 87, 224, 0.2);
+    outline: none;
+}
+
+.submit-btn {
+    padding: 15px 25px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+/* -------------------------------------- */
+/* 6. Harita Bölümü */
+/* -------------------------------------- */
+
+.map-section {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.map-section h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.map-container {
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: var(--shadow-hover);
+}
+
+.map-container iframe {
+    display: block; /* iframe'in altındaki boşluğu kaldırır */
+}
+
+/* ======================================================= */
+/* 1. TAŞIYICI AYARI (BUTONUN KONUMLANDIRILMASI İÇİN GEREKLİ) */
+/* ======================================================= */
+/* .header öğesini göreceli (relative) yaparak, içindeki butonun 
+   onun konumuna göre ayarlanmasını sağlıyoruz. */
+   .header {
+    /* Mevcut stillerinizin yanına bu satırı ekleyin: */
+    position: relative; 
+    /* Diğer mevcut stilleriniz (display, padding vb.) burada kalmalı */
+}
+
+/* ======================================================= */
+/* 2. LANG-TOGGLE BUTONU STİLLERİ */
+/* ======================================================= */
+
+.header-lang-btn {
+    /* Butonu ul'nin solunda konumlandırmak için Mutlak (absolute) kullanıyoruz */
+    position: absolute;
+    
+    /* Butonu .header'ın soluna ve ul ile aynı dikey hizaya hizala */
+    /* Tam değerler layout'a göre değişse de, li'lerin başladığı yere yakın bir değer verelim */
+    left: 10px; 
+    
+    /* Eğer ul/li dikey olarak ortalanmışsa: */
+    /* Veya dikey konumu header'ın tasarımına göre ayarlayın: */
+    top: 50%; 
+    transform: translateY(-50%); /* Dikey olarak tam ortala */
+    
+    /* Görünüm */
+    background-color: #6D57E0;
+    color: #fff;
+    padding: 8px 12px; /* Biraz daha küçük padding */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px; /* Daha küçük font */
+    font-weight: 600;
+    
+    /* Geçiş (Animasyon) */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Navigasyonun önünde görünmesi için */
+}
+
+/* Buton üzerine gelindiğinde (Hover) durumu */
+.header-lang-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-50%) scale(1.05); /* Y ekseninde kaymayı bozmamak için -50% korundu */
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Butona tıklandığında (Active) durumu */
+.header-lang-btn:active {
+    background-color: #004085;
+    transform: translateY(-50%) scale(0.98);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.lang-item{
+    text-align: center;
+    margin-bottom: 20px;
+}
